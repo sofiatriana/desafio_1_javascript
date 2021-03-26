@@ -8,7 +8,7 @@ body{
     font-size: 16px;
 }
 .background-image{
-    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/fondo.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0,0,0,.50) 100%), url(../img/fondo.jpg);
     box-shadow: inset 0 0 500px #000000;
     background-position: center;
     background-size: cover;
