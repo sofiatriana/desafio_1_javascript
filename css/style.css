@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+.background-image{
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/fondo.jpg);
+    box-shadow: inset 0 0 500px #000000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+}
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+header{
+    padding: 30px 0;
+}
+header i{
+    padding-right: 7px;
+}
+header .contenedor{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    margin-right: 3.12em;
+}
+header nav a:hover{
+    border-bottom: 1px solid black;
+}
+.contenedor_texto{
+    font-size: 16px;
+    color: #fff;
+}
+.contenedor_texto .titulo{
+    font-size: 5em;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2em;
+}
+.contenedor_texto .subtitulo{
+    font-size: 1em;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0.31em ;
+}
+.section{
+    background-color: rgba(0, 0, 0, 0.952);
+    box-shadow:  0 0 100px #070707;
+}
+.section .contenedor_texto{
+    text-align: center;
+}
+.section .contenedor_texto h2{
+    font-size: 2em;
+    padding-top: 1em;
+}
+.section .contenedor_texto p{
+    margin: 1em 20em;
+}
+.contenedor_img{
+    margin: 2em 0;
+    display: grid;
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 500px);
+    grid-template-areas: 
+    'img1  img2  img3';
+}
+.img1{
+    grid-area: img1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.img2{
+    grid-area: img2;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.img3{
+    grid-area: img3;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.more{
+    text-align: center;
+    font-weight: 300;
+    color: rgb(0, 39, 56);
+    cursor: pointer;
+}
+.contenedor_texto .h2{
+    margin-top: 3em;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,300px);
+    grid-gap: 1.5em;
+    grid-template-areas: 
+    'imagen1  imagen2'
+    'texto1   texto2';
+    margin-top: 2em;
+}
+.imagen1{
+    grid-area: imagen1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.imagen2{
+    grid-area: imagen2;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.grid__textos{
+    grid-area: texto1;
+    text-align: center;
+    margin-top: 1em;
+    color: aliceblue;
+}
+.grid__textos2{
+    grid-area: texto2;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 1em;
+}
+.grid h2{
+    margin-top: 0.31em;
+}
+.grid h5, p{
+    margin-top: 1em;
+}
+footer{
+    
+    background-color: black;
+}
+.imagen{
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../img/montaña.jpg);
+    box-shadow: inset 0 0 500px #000000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 80vh;
+}
+.footer_texto{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1000px){
+    .body{
+        font-size:15px;
+    }
+}
+@media (max-width: 800px){
+    .body{
+        font-size:12px;
+    }
+    .contenedor_texto .titulo{
+        font-size: 4em;
+    }
+    .background-image{
+        min-height: 70vh;
+    }
+    header .logo{
+        margin-bottom: 2rem;
+    }
+    header .contenedor{
+        flex-direction: column;
+        text-align: center;
+    }
+    .section .contenedor_texto p{
+        margin: 1em 7em;
+    }
+    .footer_texto h4{
+        margin-left: 1em;
+    }
+}
+
+@media (max-width: 540px){
+    body{
+        font-size: 10px;
+    }
+    .footer_texto{
+        display:inline-block;
+        text-align: center;
+    }
+    .footer_texto h4{
+        margin-top: 1em;
+    }
+    .grid{
+        display: grid;
+        grid-template-rows: repeat(2,200px);
+        grid-template-areas: 
+        'imagen1 texto1' 
+        'imagen2 texto2' ;
+        margin:2em 0;
+    }
+}
+
