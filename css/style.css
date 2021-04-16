@@ -3,12 +3,19 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
-    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F4.bp.blogspot.com%2F-oQZgNv6yyGU%2FUknoamX9GBI%2FAAAAAAAAAlQ%2F33zrccvGX58%2Fw1200-h630-p-k-nu%2Fdalia1.jpg&f=1&nofb=1);
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+.background-image{
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0,0,0,.50) 100%), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperaccess.com%2Ffull%2F1273780.jpg&f=1&nofb=1);
+    box-shadow: inset 0 0 500px #000000;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
 }
 .contenedor{
     width: 90%;
@@ -17,55 +24,61 @@ body{
 header{
     padding: 30px 0;
 }
+header i{
+    padding-right: 7px;
+}
 header .contenedor{
+    text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-header .logotipo{
-    font-family: 'Merriweather Sans', sans-serif;
-    font-weight: normal;
-    color:rgb(90, 90, 90);
-}
-header nav a{
-    color: #AAA;
+a{
     text-decoration: none;
-    margin-right: 20px;
-}
-header nav a:hover,
-header nav a.activo{
     color: #fff;
+    margin-right: 3.12em;
 }
-.div-1{
+header nav a:hover{
+    border-bottom: 1px solid black;
+}
+.contenedor_texto{
     font-size: 16px;
-    min-height: 70vh;
     color: #fff;
-    margin-bottom:2rem;
-    display: flex;
-    align-items: end;
 }
-.div-1 .contenedor{
-    margin-bottom:4rem; 
-}
-.div-1 .titulo{
+.contenedor_texto .titulo{
+    font-size: 5em;
     font-weight: 600;
-    font-size: 3.12em;
-    margin-bottom: 0.4em;
+    text-align: center;
+    margin-top: 2em;
 }
-.div-1 .descripcion{
-    font-weight: normal;
+.contenedor_texto .subtitulo{
     font-size: 1em;
-    line-height:1.75em;
-    max-width: 50%;
-    margin-bottom: 1.25em;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0.31em ;
 }
-.img{
+.section{
+    background-color: rgba(0, 0, 0, 0.952);
+    box-shadow:  0 0 100px #070707;
+}
+.section .contenedor_texto{
+    text-align: center;
+}
+.section .contenedor_texto h2{
+    font-size: 2em;
+    padding-top: 1em;
+}
+.section .contenedor_texto p{
+    margin: 1em 20em;
+}
+.contenedor_img{
+    margin: 2em 0;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    grid-template-areas: 'img1  img2  img3';
-    background-color: rgb(196, 196, 196);
+    grid-gap: 1.5em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 500px);
+    grid-template-areas: 
+    'img1  img2  img3';
 }
 .img1{
     grid-area: img1;
@@ -85,23 +98,124 @@ header nav a.activo{
     width: 100%;
     height: 100%;
 }
-.texto{
-    background-color: rgb(196, 196, 196);
+.more{
     text-align: center;
+    font-weight: 300;
+    color: rgb(0, 39, 56);
+    cursor: pointer;
 }
-.texto h2{
-    padding-top: 10px;
+.contenedor_texto .h2{
+    margin-top: 3em;
 }
-.texto p{
-    padding: 20px;
-    font-size: 20px;
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,300px);
+    grid-gap: 1.5em;
+    grid-template-areas: 
+    'imagen1  imagen2'
+    'texto1   texto2';
+    margin-top: 2em;
 }
-@media screen and (max-width:800px){
-    header .logotipo{
+.imagen1{
+    grid-area: imagen1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.imagen2{
+    grid-area: imagen2;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.grid__textos{
+    grid-area: texto1;
+    text-align: center;
+    margin-top: 1em;
+    color: aliceblue;
+}
+.grid__textos2{
+    grid-area: texto2;
+    text-align: center;
+    color: aliceblue;
+    margin-top: 1em;
+}
+.grid h2{
+    margin-top: 0.31em;
+}
+.grid h5, p{
+    margin-top: 1em;
+}
+footer{
+    
+    background-color: black;
+}
+.imagen{
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.theallineed.com%2Fwp-content%2Fuploads%2F2018%2F01%2FMontana-river.jpg&f=1&nofb=1);
+    box-shadow: inset 0 0 500px #000000;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 80vh;
+}
+.footer_texto{
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1000px){
+    .body{
+        font-size:15px;
+    }
+}
+@media (max-width: 800px){
+    .body{
+        font-size:12px;
+    }
+    .contenedor_texto .titulo{
+        font-size: 4em;
+    }
+    .background-image{
+        min-height: 70vh;
+    }
+    header .logo{
         margin-bottom: 2rem;
     }
     header .contenedor{
         flex-direction: column;
         text-align: center;
+    }
+    .section .contenedor_texto p{
+        margin: 1em 7em;
+    }
+    .footer_texto h4{
+        margin-left: 1em;
+    }
+}
+
+@media (max-width: 540px){
+    body{
+        font-size: 10px;
+    }
+    .footer_texto{
+        display:inline-block;
+        text-align: center;
+    }
+    .footer_texto h4{
+        margin-top: 1em;
+    }
+    .grid{
+        display: grid;
+        grid-template-rows: repeat(2,200px);
+        grid-template-areas: 
+        'imagen1 texto1' 
+        'imagen2 texto2' ;
+        margin:2em 0;
     }
 }
