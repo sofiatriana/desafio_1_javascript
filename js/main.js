@@ -17,26 +17,27 @@ class viaje{
         '. Fechas del vuelo: ' + this.fechas);
     }
 }
+let citiesNoruega = [
+    'Stanvanguer',
+    'Kristiansand',
+    'Bergen', 
+    'Oslo',
+];
+citiesNoruega.push('Trondheim');
+
+let citiesUsa = [
+    'Chicago',
+    'Phoenix',
+    'Jacksonville', 
+    'Carolina del norte',
+];
+citiesUsa.pop();
 
 if (opcionesLugares == 1){
     let viaje1 = new viaje('naeroyfjord Noruega', 120, 'Del 30 abril al 15 mayo del 2021')
     viaje1.sumaIva();
     viaje1.informacionCompleta();
 
-    let citiesNoruega = [
-        'Stanvanguer',
-        'Kristiansand',
-        'Bergen', 
-        'Oslo',
-    ];
-    let planeStanvanguer = {
-        destination: 'Trondheim',
-        transportMode: 'Plane',
-        cost: 200,
-        country: 'Noruega',
-    }
-    citiesNoruega.push(planeStanvanguer);
-    
     let valorVuelo = parseInt(prompt('Ingrese el valor que puede pagar por un viaje a noruega'))
     alert('Su valor es de ' + valorVuelo)
     if (valorVuelo <= 150){
@@ -51,13 +52,6 @@ else if (opcionesLugares == 2){
     viaje2.sumaIva();
     viaje2.informacionCompleta();
 
-    let citiesUsa = [
-        'Chicago',
-        'Phoenix',
-        'Jacksonville', 
-        'Carolina del norte',
-    ];
-    citiesUsa.pop();
     let valorVueloUs = parseInt(prompt('Ingrese el valor que puede pagar por un viaje a Estados Unidos'))
     alert('Su valor es de ' + valorVueloUs)
     if (valorVueloUs <= 150){
@@ -70,8 +64,5 @@ else if (opcionesLugares == 2){
 } else {
     alert('No tenemos mas vuelos disponibles')
 }
-
-
-
 
 
