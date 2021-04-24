@@ -1,68 +1,150 @@
-// Desafio 05 y 06
+// DESAFIO 06 LOCAL STORAGE
 
-let lugares = alert("¿A que lugar prefieres ir?");
-let opcionesLugares = parseInt(prompt ("1: naeroyfjord Noruega, 2: antelope canyon united states "));
 
-class viaje{
-    constructor(lugar, precio, fechas){
-        this.lugar = lugar.toUpperCase();
-        this.precio  = parseFloat(precio);
-        this.fechas = fechas.toUpperCase();
-    }
-    sumaIva() {
-        this.precio = this.precio * 1.19;
-    }
-    informacionCompleta(){
-        console.log('Lugar del viaje ' + this.lugar + ', con un costo de ' + this.precio + ' dolares' + 
-        '. Fechas del vuelo: ' + this.fechas);
-    }
-}
-let citiesNoruega = [
-    'Stanvanguer',
-    'Kristiansand',
-    'Bergen', 
-    'Oslo',
-];
-citiesNoruega.push('Trondheim');
+// const usuario = 'Tiago'
+// const edad = 50
 
-let citiesUsa = [
-    'Chicago',
-    'Phoenix',
-    'Jacksonville', 
-    'Carolina del norte',
-];
-citiesUsa.pop();
+// el local coje el ultimo que se pone
+//localStorage.setItem('usuario', 'carbana')
+//localStorage.setItem('edad', edad)
 
-if (opcionesLugares == 1){
-    let viaje1 = new viaje('naeroyfjord Noruega', 120, 'Del 30 abril al 15 mayo del 2021')
-    viaje1.sumaIva();
-    viaje1.informacionCompleta();
+//localStorage.usuario = 'Lucas'
 
-    let valorVuelo = parseInt(prompt('Ingrese el valor que puede pagar por un viaje a noruega'))
-    alert('Su valor es de ' + valorVuelo)
-    if (valorVuelo <= 150){
-        alert('No tenemos vuelos disponibles')
-    } else{
-        alert('los lugares a los que puede viajar son: ' + citiesNoruega)
-        console.log(citiesNoruega);
-    }
-}
-else if (opcionesLugares == 2){
-    let viaje2 = new viaje('antelope canyon united states', 110, 'Junio 14 al 20 de junio del 2021')
-    viaje2.sumaIva();
-    viaje2.informacionCompleta();
+//console.log(localStorage.usuario);
 
-    let valorVueloUs = parseInt(prompt('Ingrese el valor que puede pagar por un viaje a Estados Unidos'))
-    alert('Su valor es de ' + valorVueloUs)
-    if (valorVueloUs <= 150){
-        alert('No hay vuelos con ese valor')
-    } else{
-        alert('los lugares a los que puede viajar son: ' + citiesUsa)
-        console.log(citiesUsa);
-    }
+//let usuarioLocal = localStorage.getItem('usuario')
+//let edadLocal = localStorage.getItem('edad')
+
+//  console.log(usuarioLocal)
+// todo lo que se guarda al localsorage es un string
+//  console.log(typeof edadLocal)
+
+//remuevo uno expecificamente
+//  localStorage.removeItem('edad')
+//remuevo todo
+//  localStorage.clear()
+
+// let usuario;
+// let usuarioLocal = localStorage.getItem('usuario')
+
+// if (usuarioLocal){
+  //     usuario = usuarioLocal
+  // }else {
+    //     usuario = prompt('Ingrese su nombre')  
+    // }
+    // alert(`Bienvenido ${usuario}`)
+    //usuario = prompt('Ingrese su nombre')
+    // localStorage.setItem('usuario', usuario)
     
-} else {
-    alert('No tenemos mas vuelos disponibles')
+    
+    // console.log(localStorage.usuario)
+    
+    
+    
+    //JSON
+    
+// let arrayProductos = [
+  //     {id: 1, nombre:'Remera', precio: 1000, stock:100},
+//     {id: 2, nombre:'Remera', precio: 2000, stock:100},
+//     {id: 3, nombre:'Pantalon', precio: 1500, stock:100},
+//     {id: 4, nombre:'Pantalon', precio: 1700, stock:100},
+//     {id: 5, nombre:'Pantalon', precio: 5000, stock:100},
+//     {id: 6, nombre:'Pantalon', precio: 3000, stock:100},
+//     {id: 7, nombre:'Calzado', precio: 7000, stock:100},
+//     {id: 8, nombre:'Calzado', precio: 8000, stock:100},
+//     {id: 9, nombre:'Calzado', precio: 13000, stock:100},
+//     {id: 10, nombre:'Buzo', precio: 6000, stock:100},
+//     {id: 11, nombre:'Buzo', precio: 19000, stock:100},
+//     {id: 12, nombre:'Buzo', precio: 800, stock:100},
+// ]
+// let carrito = [];
+
+// let carritoEnLS = JSON.parse (localStorage.getItem('carrito'))
+// if (carritoEnLS) {
+//     let continuar = prompt('¿Quiere continuar su ultima compra?')
+//     if (continuar == 'si'){
+//         carrito = carritoEnLS
+//     } else{
+//         localStorage.clear()
+//     }
+// }
+
+
+// console.log(carrito);
+// function agregarAlCarrito() {
+  //     let id = parseInt(prompt('Ingrese ID producto'))
+  
+//     let producto = arrayProductos.find(el => el.id == id)
+//     if (producto){
+//         carrito.push(producto)
+//         localStorage.setItem('carrito', JSON.stringify(carrito))
+//     }
+//     console.log(carrito);
+// }
+
+
+
+
+
+//DOM
+
+let usuario = prompt('¿Cual es tu nombre?')
+let h4 = document.getElementById('subtitulo')
+h4.innerHTML = `Bienvenido ${usuario}`
+localStorage.setItem( 'usuario', usuario )
+
+let viajes =[
+  {id: 1, lugar:'Tromson', precio: 262},
+  {id: 2, lugar:'Oslo', precio: 300},
+  {id: 3, lugar:'Bergen', precio: 150},
+]
+ 
+
+function sumar() {
+  let viaje = prompt('Quiere ir a Tromson, Oslo o Bergen')
+  const carrito = []
+  if (viaje === "Tromson"){
+    carrito.push(viajes[0])
+    let viajeTromson = carrito.reduce( (acc, el)=> acc += el.precio, 0 )
+    alert(`El valor del viaje es de ${viajeTromson} dolares`)
+  } else if (viaje == 'Oslo'){
+    carrito.push(viajes[1])
+    let totalCarrito = carrito.reduce( (acc, el)=> acc += el.precio, 0 )
+    alert(`El valor del viaje a Oslo es de ${totalCarrito} dolares`)
+  } else{
+    alert('No hay mas vuelos')
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
     <title>INICIO</title>
 </head>
 
@@ -19,7 +20,7 @@
                <a href="#">ABOUT</a>
                <a href="#">EXPLORE</a>
                <a href="#">JOURNAL</a>
-               <a href="#"><i class="fas fa-search-location"></i>SEARCH</a>
+               <button id="boton-carrito" class="botonCarro"><i class="fas fa-shopping-cart fa-2x"></i><span id="contadorCarrito">0</span></button></i>
            </nav>
         </div>
     </header>
@@ -28,7 +29,7 @@
       <div class="contenedor_texto">
          <div class="contenedor">
            <h1 class="titulo">The Great Outdoors</h1>
-           <h4 class="subtitulo">Wander often. Wonder always</h4>
+           <h4 class="subtitulo" id= "subtitulo">Wander often. Wonder always</h4>
          </div>
       </div>
    </main>
@@ -44,16 +45,26 @@
                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam illum vel repellat ullam dignissimos?
            </p>
        </div>
-
+       
        <div class="contenedor">
            <div class="contenedor_img">
-               <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.fjordtravel.no%2Fwp-content%2Fuploads%2F2017%2F12%2F2BCAF065-B3CE-4117-B538-4D972F14AF68.jpg&f=1&nofb=1" alt="naeroyfjord norway" class="img1">
-               <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Flower-antelope-canyon-usa-corkscrew-slot-national-park-navajo-reservation-near-page-arizona-united-states-landmark-181673089.jpg&f=1&nofb=1" alt="antelope canyon united states" class="img2">
+                <div class="single-team">
+                   <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.fjordtravel.no%2Fwp-content%2Fuploads%2F2017%2F12%2F2BCAF065-B3CE-4117-B538-4D972F14AF68.jpg&f=1&nofb=1" alt="naeroyfjord norway" class="img1">
+                <div class="team-text">
+                       <h2>Viajes Noruega</h2>
+                       <p>Europa</p>
+                       <p></p>
+                       <p>
+                           <button onclick="sumar()">Agregar<i class="fas fa-shopping-cart"></i></button>
+                       </p>
+                   </div>
+               </div> 
+                <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Flower-antelope-canyon-usa-corkscrew-slot-national-park-navajo-reservation-near-page-arizona-united-states-landmark-181673089.jpg&f=1&nofb=1" alt="antelope canyon united states" class="img2">                
                <img src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-v9ziJG1E5DY%2FVVjIXdXwurI%2FAAAAAAABUYY%2Fw3B1Hz1WDyo%2Fs1600%2F2.jpg&f=1&nofb=1" alt="grossglockner austria" class="img3">
            </div>
 
            <div class="more">
-               <h3>SEE MORE</h3>
+               <button> SEE MORE</button>
            </div>
        </div>
 

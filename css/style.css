@@ -41,6 +41,12 @@ a{
 header nav a:hover{
     border-bottom: 1px solid black;
 }
+.botonCarro{
+    border-radius: 10px;
+    background-color: #000000;
+    color: white;
+    padding: 5px;
+}
 .contenedor_texto{
     font-size: 16px;
     color: #fff;
@@ -106,6 +112,70 @@ header nav a:hover{
 }
 .contenedor_texto .h2{
     margin-top: 3em;
+}
+.single-team{
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-items: flex-end;
+    transition: .6s ease-out;
+}
+.single-team:hover{
+    transform: translateY(15px);
+}
+.single-team:hover::before{
+    opacity: 1;
+}
+.single-team:hover .team-text{
+    opacity: 1;
+    transform: translateY(0);
+}
+.single-team::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to top, #000, transparent);
+    z-index: 2;
+    transition: 0.5s;
+    opacity: 0;
+    
+}
+.single-team .team-text{
+    position: relative;
+    z-index: 3;
+    color: #fff;
+    opacity: 0;
+    transform:0.5s;
+}
+.team-text h2{
+    margin: 0 0 0 5px;
+    letter-spacing: 3px;
+}
+.team-text p {
+    margin: 10px 0 0 5px;
+    letter-spacing: 4px;
+}
+.team-text button{
+    cursor: pointer;
+    height: 30px;
+    border: 1px solid #20678d;
+    color: #fff;
+    background: linear-gradient(45deg, #20678d,#2991ea);
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.team-text button i{
+    padding-left:5px;
+    color: #fff;
+}
+.single-team img{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .grid{
     display: grid;
