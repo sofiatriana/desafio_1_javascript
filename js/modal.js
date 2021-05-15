@@ -12,7 +12,7 @@ botonAbrir.on('click', ()=>{
 botonCerrar.on('click', ()=>{
     contenedorModal.classList.toggle('modal-active')
 })
-contenedorModal.on ('click', ()=>{
+contenedorModal.on('click', ()=>{
     contenedorModal.classList.toggle('modal-active')
 })
 modalCarrito.on('click', (event)=>{
