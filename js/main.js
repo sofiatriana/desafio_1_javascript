@@ -1,6 +1,5 @@
-// DESAFIO 06 LOCAL STORAGE
+// DESAFIO 07 JQUERY
 
-//DOM
 
 let usuario = prompt('¿Cual es tu nombre?')
 let h4 = document.getElementById('subtitulo')
