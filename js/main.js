@@ -60,24 +60,23 @@ function eliminarProductos(id) {
 function actualizarCarrito() {
     const contenedorCarrito = document.getElementById('modal-contenedor')
     const precioTotal = document.getElementById('precioTotal')
-    const contadorCarro = document.getElementById('contadorCarro')
+    const contadorCarrrito = document.getElementById('contadorCarro')
 
-    contenedorCarrito.innerHTML = ''
+    contenedorCarrito.innerHTML =''
 
     carrito.forEach((contenedor) => {
-        contenedorCarrito.innerHTML +=`
-               <div class="productoEnCarrito">
-                    <p>Lugar: ${contenedor.vuelo}</p>
-                    <p>Precio: ${contenedor.precio}</p>
-                    <button onclick=eliminarProductos(${contenedor.id}) class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
-                </div>
+        contenedorCarrito.innerHTML += `
+        <div class="productoEnCarrito">
+           <p>Lugar: ${contenedor.vuelo}</p>
+           <p>Precio: ${contenedor.precio}</p>
+           <button onclick=eliminarProductos(${contenedor.id}) class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+        </div>
         `
     })
-    
-    precioTotal.innerText = carrito.reduce((acc, el) => acc += el.precio, 0)
-    contadorCarro.innerText = carrito.length
-}
 
+    precioTotal.innerText = carrito.reduce( (acc, el) => acc += el.precio, 0 )
+    contadorCarrrito.innerText = carrito.length
+}
 
 
 

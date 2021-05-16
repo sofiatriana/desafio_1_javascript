@@ -1,19 +1,19 @@
 //jquery
 
 const botonAbrir = $('#btn-carrito')
-const contenedorModal = $('.modal-contenedor')[0]
+const contenedorModal = $('.modal-contenedor')
 
 const botonCerrar = $('#carritoCerrar')
-const modalCarrito = $('.modal-carrito')[0]
+const modalCarrito = $('.modal-carrito')
 
 botonAbrir.on('click', ()=>{
-    contenedorModal.classList.toggle('modal-active')
+    contenedorModal.toggleClass('modal-active')
 })
 botonCerrar.on('click', ()=>{
-    contenedorModal.classList.toggle('modal-active')
+    contenedorModal.toggleClass('modal-active')
 })
 contenedorModal.on('click', ()=>{
-    contenedorModal.classList.toggle('modal-active')
+    contenedorModal.toggleClass('modal-active')
 })
 modalCarrito.on('click', (event)=>{
     event.stopPropagation()
