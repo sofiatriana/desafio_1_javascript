@@ -62,7 +62,7 @@ function actualizarCarrito() {
     const precioTotal = document.getElementById('precioTotal')
     const contadorCarrrito = document.getElementById('contadorCarro')
 
-    contenedorCarrito.innerHTML =''
+    contenedorCarrito.innerHTML = ''
 
     carrito.forEach((contenedor) => {
         contenedorCarrito.innerHTML += `
