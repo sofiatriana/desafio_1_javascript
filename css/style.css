@@ -301,10 +301,11 @@ footer{
 .productoEnCarrito:hover {
     border-left: 5px solid royalblue;
 }
-
+.productoEnCarrito p {
+    color: white;
+}
 .boton-eliminar {
-    background-color: white;
-    color: rgba(255, 0, 0, 0.945);
+    color: rgba(255, 72, 72, 0.945);
     border: none;
     font-size: 20px;
 }

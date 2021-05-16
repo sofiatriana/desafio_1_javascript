@@ -58,7 +58,7 @@ function eliminarProductos(id) {
     actualizarCarrito()
 }
 function actualizarCarrito() {
-    const contenedorCarrito = document.getElementById('modal-contenedor')
+    const contenedorCarrito = document.getElementById('carrito-contenedor')
     const precioTotal = document.getElementById('precioTotal')
     const contadorCarrrito = document.getElementById('contadorCarro')
 
