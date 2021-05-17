@@ -1,0 +1,22 @@
+body{
+    background-color: azure;
+}
+
+.btn{
+    cursor: pointer;
+    margin: 200px 200px 200px 300px;
+    /* bottom: -30px; */
+    background-color: #ffffff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0, 0.1);
+    font-weight: 400;
+    color: #0c2227;
+    transition: 0.25s;
+}
+.btn:hover{
+    letter-spacing: 2px;
+    background-color: rgb(255, 214, 221);
+    border-radius: 3px;
+}
